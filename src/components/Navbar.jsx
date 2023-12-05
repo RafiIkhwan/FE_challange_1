@@ -1,7 +1,6 @@
-import logo from '/pictures/favicon.png'
-import Button from './Button'
+import Button from "./Button";
 
-export default function Navbar() {
+export default function Navbar({ logo }) {
   return (
     <>
       <nav className="flex flex-row justify-between">
@@ -11,10 +10,10 @@ export default function Navbar() {
             <h3 className='font-bold text-2xl'>Suxz</h3>
           </div>
           <ul className='sm:flex hidden items-center text-sm gap-x-6 text-zinc-600 ml-14'>
-            <li><a href="">Home</a></li>
-            <li><a href="">Learnings</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Testimonial</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#learnings">Learnings</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
           </ul>
         </div>
         <div className="flex flex-row justify-end text-sm">
