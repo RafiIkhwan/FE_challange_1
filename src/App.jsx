@@ -28,16 +28,18 @@ function App() {
   return (
     <>
       <div className="py-10">
+        {/* Navbar */}
         <Container>
           <Navbar logo={logo} />
         </Container>
+        {/* Home */}
         <Container>
-          <div id='home' className="flex flex-col-reverse sm:flex-row pt-20">
+          <div id='home' className="flex flex-col-reverse gap-y-10 sm:flex-row py-20 sm:pb-0">
             <div className="flex flex-col flex-1">
               <p className='text-[#8C82FC] font-bold tracking-widest'>SUXZ MAKE IT EASY</p>
               <h2 className='text-6xl font-bold leading-tight'>Find Your Way Of Success</h2>
               <p className='my-5'>We help you to increase self-confidence and train yourself in a direction and make you more creative in developing a work</p>
-              <div className="flex gap-x-8 justify-between">
+              <div className="flex gap-x-8 sm:justify-between">
                 <Button className={'bg-[#8C82FC] text-white py-3 px-8'}>Get Started</Button>
                 <Button className={'bg-zinc-100 text-gray-400 py-3 px-8'}>Our Services</Button>
               </div>
@@ -47,6 +49,7 @@ function App() {
             </div>
           </div>
         </Container>
+        {/* Learnings */}
         <div id='learnings' className="bg-gray-100">
           <Container>
             <div className="flex flex-col gap-y-6 py-16">
@@ -56,9 +59,9 @@ function App() {
                   <h3 className='text-4xl text-zinc-800 font-bold leading-tight'>Online Learning Platform International Curriculum</h3>
                   <p>Study and understand the material class is more relaxed without time limit.</p>
                 </div>
-                <div className="flex-1"></div>
+                <div className="sm:flex-1"></div>
               </div>
-              <div className="flex gap-x-4">
+              <div className="flex flex-col sm:flex-row gap-x-4 gap-y-10">
                 <Card img={CardIMG1} title={'Starter'} p={'Free class access for that start learning code and design'} />
                 <Card img={CardIMG2} title={'Premium'} p={'Advanced material from the Starter & learn to build projects'} />
                 <Card img={CardIMG3} title={'Superstar'} p={'Materials for experts who have completed the premium package'} />
@@ -67,8 +70,9 @@ function App() {
             </div>
           </Container>
         </div>
+        {/* About Us */}
         <Container>
-          <div id='about-us' className="flex space-x-10 pt-20">
+          <div id='about-us' className="flex flex-col sm:flex-row space-x-10 py-20 sm:pb-0">
             <div className="flex flex-1 items-center">
               <img src={AboutIMG} alt="" className='flex items-center' />
             </div>
@@ -96,6 +100,7 @@ function App() {
             </div>
           </div>
         </Container>
+        {/* Media */}
         <div className="bg-gray-100">
           <Container>
             <div className="py-20 sm:max-w-[960px] mx-auto text-center flex flex-col space-y-20">
@@ -104,13 +109,13 @@ function App() {
                 <p className='text-2xl'>Our graduates have worked in more than 400 companies around the World</p>
               </div>
               <div className="flex flex-col space-y-10 sm:space-y-16">
-                <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-none gap-y-10 md:grid-cols-4 justify-items-center items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-none gap-y-10 lg:grid-cols-4 justify-items-center items-center">
                   <img src={Github} alt="Github.png" className='object-contain' />
                   <img src={Microsoft} alt="Microsoft.png" className='object-contain' />
                   <img src={Redis} alt="Redis.png" className='object-contain' />
                   <img src={Amazon} alt="Amazon.png" className='object-contain' />
                 </div>
-                <div className="grid grid-cols-2 grid-rows-2 md:grid-rows-none gap-y-10 md:grid-cols-4 justify-items-center items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-none gap-y-10 lg:grid-cols-4 justify-items-center items-center">
                   <img src={Paypal} alt="Paypal.png" className='object-contain' />
                   <img src={Linkedin} alt="Linkedin.png" className='object-contain' />
                   <img src={Reddit} alt="Reddit.png" className='object-contain' />
@@ -120,6 +125,7 @@ function App() {
             </div>
           </Container>
         </div>
+        {/* Testimonial */}
         <Container>
           <div id='testimonial' className="pb-20">
             <div className="flex flex-col space-y-4 items-center text-center py-16">
@@ -135,6 +141,7 @@ function App() {
             </div>
           </div>
         </Container>
+        {/* Contact */}
         <div className="bg-[rgba(0,0,0,0.5)] bg-[url('/pictures/banner.png')] bg-cover bg-blend-darken">
           <Container>
             <div className="flex flex-col space-y-4 items-center text-center py-16">
@@ -147,9 +154,10 @@ function App() {
             </div>
           </Container>
         </div>
+        {/* Footer */}
         <Container>
           <div id="footer" className="py-16">
-            <div className="flex flex-row space-x-14">
+            <div className="flex flex-col sm:flex-row sm:space-x-14 space-y-14 sm:space-y-0">
               <div className="flex flex-col space-y-5 flex-[2_2_0%]">
                 <div className="flex gap-x-3 items-center">
                   <img src={logo} className='object-cover w-8' alt="logo.png" />
@@ -208,8 +216,8 @@ function App() {
 
 function Card({ img, title, p }) {
   return (
-    <div className="flex flex-col h-[280px] bg-white hover:bg-[#8C82FC] hover:text-white transition-colors rounded-md p-5 flex-1 justify-between">
-      <img src={img} alt="" className='w-12 xl:w-16' />
+    <div className="flex flex-col space-y-8 bg-white hover:bg-[#8C82FC] hover:text-white transition-colors rounded-md p-5 flex-1 justify-between">
+      <img src={img} alt="" className='sm:w-12 w-32 xl:w-16' />
       <div className="flex flex-col space-y-2">
         <h5 className='text-lg'>{title}</h5>
         <p className='text-sm'>{p}</p>
