@@ -1,6 +1,6 @@
 import './App.css'
 import Button from './components/Button'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Container from './components/Container'
 import CompanyPNG from '/pictures/header_img.png'
 import CardIMG1 from '/pictures/card1.png'
